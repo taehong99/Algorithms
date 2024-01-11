@@ -47,6 +47,28 @@ namespace _01.List
             int input2 = int.Parse(Console.ReadLine());
             list.AddOrDelete(input2);
             list.PrintList();
+
+            // A++
+            Inventory inventory = new Inventory();
+            //아이템 추가
+            Item shield = new Item("방패");
+            inventory.AddItem(shield);
+            inventory.ShowItems();
+
+            //아이템 다수 추가
+            Item potion = new Item("물약");
+            Item sword = new Item("검");
+            Item bread = new Item("빵");
+            inventory.AddItem(potion, sword, bread);
+            inventory.ShowItems();
+
+            //아이템 제거
+            inventory.RemoveItem(sword);
+            inventory.ShowItems();
+
+            //인벤토리 비움
+            inventory.ClearInventory();
+            inventory.ShowItems();
         }
     }
 }
