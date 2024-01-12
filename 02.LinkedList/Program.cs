@@ -71,7 +71,7 @@
             Console.WriteLine();
 
             // (8, 4)
-            Console.Write("요세푸스(N = 8, K = 4) : "); // 답: <2, 4, 1, 5, 3>
+            Console.Write("요세푸스(N = 8, K = 4) : "); // 답: <4, 8, 5, 2, 1, 3, 7, 6>
             foreach (int i in Josephus.JosephusProblem(8, 4))
             {
                 Console.Write($"[ {i} ]");
