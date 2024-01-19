@@ -40,7 +40,7 @@ namespace _08.HashTable
         ADREAMER
         */
 
-        static void Main()
+        static void Main1()
         {
             string[] args = Console.ReadLine().Split();
             int N = int.Parse(args[0]);

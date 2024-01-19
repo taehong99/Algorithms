@@ -36,7 +36,7 @@ namespace _08.HashTable
 
         */
 
-        static void Main()
+        static void Main1()
         {
             int n = int.Parse(Console.ReadLine());
             int k = int.Parse(Console.ReadLine());
