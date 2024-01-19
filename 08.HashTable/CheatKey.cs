@@ -9,6 +9,7 @@ namespace _08.HashTable
     internal class CheatKey
     {
         private Dictionary<string, Action> cheatDic;
+        private Action cheatToRun;
 
         public CheatKey()
         {
@@ -19,14 +20,8 @@ namespace _08.HashTable
         }
         public void Run(string cheatKey)
         {
-            if (cheatDic.ContainsKey(cheatKey))
-            {
-                cheatDic[cheatKey].Invoke();
-            }
-            else
-            {
-                Console.WriteLine("입력하신 치트키가 없습니다.");
-            }
+            cheatDic.TryGetValue(cheatKey, out cheatToRun);
+            cheatToRun?.Invoke();
         }
         public void ShowMeTheMoney()
         {
